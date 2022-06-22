@@ -17,3 +17,4 @@ configFile: mocharc.yml
 nodeVersion: 12.22.6
 version: 1.0
 containerImage: lambda2dockerhub/synapse:py3.8
+
