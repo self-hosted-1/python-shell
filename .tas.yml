@@ -1,0 +1,19 @@
+---
+framework: mocha
+preMerge:
+  pattern:
+    - "./test/*.js"
+preRun:
+     command:
+        - npm ci
+        - npm run compile
+postMerge:
+  pattern: 
+    - "./test/*.js"
+postRun:
+     command:
+        - node --version
+configFile: mocharc.yml
+nodeVersion: 12.22.6
+version: 1.0
+containerImage: lambda2dockerhub/synapse:py3.8
